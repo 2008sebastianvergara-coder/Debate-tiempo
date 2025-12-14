@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { CategoryType } from "../types";
 
-const apiKey = process.env.API_KEY || '';
+const apiKey = import.meta.env.VITE_API_KEY || '';
 const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
 
 // Model configuration
